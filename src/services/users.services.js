@@ -12,16 +12,19 @@ class UsersServices {
       }
    }
 
-   static async getUserTodos(user_id) {
+   static async getUserTodos(id) {
       try {
-         const userCreated = Todos.findAll(
+         const userCreated = Users.findByPk(id,
             {
-               where: { user_id },
-               attributes: ['id', 'title', 'description', 'status', 'category_id'],
+               attributes: ['username', 'email'],
                include: [
                   {
-                     model: Categories,
-                     attributes: ['name']
+                     model: Todos,
+                     attributes: ['id', 'title', 'description', 'status', 'category_id'],
+                     include: {
+                        model: Categories,
+                        attributes: ['name']
+                     }
                   }
                ]
             }

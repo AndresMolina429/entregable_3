@@ -12,8 +12,8 @@ const createUser = async (req, res) => {
 
 const getUserTodos = async (req, res) => {
     try {
-        const {user_id} = req.params;
-        const userTodos = await UsersServices.getUserTodos(user_id);
+        const {id} = req.params;
+        const userTodos = await UsersServices.getUserTodos(id);
         res.json(userTodos);
     } catch (error) {
         res.status(400).json(error);
