@@ -20,7 +20,7 @@ class UsersServices {
                include: [
                   {
                      model: Todos,
-                     attributes: ['id', 'title', 'description', 'status'],
+                     attributes: ['id', 'title', 'description', 'completed'],
                      include: {
                         model: Categories,
                         attributes: ['name']

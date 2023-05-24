@@ -17,14 +17,10 @@ const Todos = db.define('todos', {
     },
     description: {
         type: DataTypes.STRING(200),
-        allowNull: false
     },
-    status: {
-        
-        // type: DataTypes.STRING(20),
-        type: DataTypes.ENUM('pendiente','completada'),
-        allowNull: false,
-        defaultValue: 'pendiente'
+    completed: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     },
     category_id: {
         type: DataTypes.INTEGER,
