@@ -1,18 +1,19 @@
 {
   "name": "entregable_3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Entregable 3",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Amolina",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
     "pg": "^8.10.0",
